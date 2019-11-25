@@ -1,24 +1,39 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
+// MODULOS
+import { ChartsModule } from "ng2-charts";
+import { SharedModule } from "src/app/shared/shared.module";
+import { FormsModule } from "@angular/forms";
 // RUTAS
 import { PAGES_ROUTES } from "./pages.routes";
-// MODULOS
-import { SharedModule } from "src/app/shared/shared.module";
 // COMPONENTES
 import { PagesComponent } from "./pages.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { ProgressComponent } from "./progress/progress.component";
 import { Graficas1Component } from "./graficas1/graficas1.component";
+/**
+ * TODO: MOVE TO COMPONENTS MODULE
+ */
+import { IncrementadorComponent } from "src/app/components/incrementador/incrementador.component";
+import { GraficoDonaComponent } from "src/app/components/grafico-dona/grafico-dona.component";
 
 @NgModule({
   declarations: [
     PagesComponent,
     DashboardComponent,
     ProgressComponent,
-    Graficas1Component
+    Graficas1Component,
+    IncrementadorComponent,
+    GraficoDonaComponent
   ],
-  imports: [CommonModule, SharedModule, PAGES_ROUTES],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ChartsModule,
+    SharedModule,
+    PAGES_ROUTES
+  ],
   exports: [
     PagesComponent,
     DashboardComponent,
