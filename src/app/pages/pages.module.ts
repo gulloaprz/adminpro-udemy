@@ -12,6 +12,8 @@ import { PagesComponent } from "./pages.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { ProgressComponent } from "./progress/progress.component";
 import { Graficas1Component } from "./graficas1/graficas1.component";
+import { AccountSettingsComponent } from "./account-settings/account-settings.component";
+
 /**
  * TODO: MOVE TO COMPONENTS MODULE
  */
@@ -24,6 +26,7 @@ import { GraficoDonaComponent } from "src/app/components/grafico-dona/grafico-do
     DashboardComponent,
     ProgressComponent,
     Graficas1Component,
+    AccountSettingsComponent,
     IncrementadorComponent,
     GraficoDonaComponent
   ],

@@ -1,5 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
+// MODULOS
+import { RouterModule } from "@angular/router";
 // COMPONENTES
 import { HeaderComponent } from "./header/header.component";
 import { SidebarComponent } from "./sidebar/sidebar.component";
@@ -13,7 +15,7 @@ import { PagenotfoundComponent } from "./pagenotfound/pagenotfound.component";
     BreadcrumbsComponent,
     PagenotfoundComponent
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   exports: [HeaderComponent, SidebarComponent, BreadcrumbsComponent]
 })
 export class SharedModule {}
