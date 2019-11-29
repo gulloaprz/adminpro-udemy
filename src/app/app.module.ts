@@ -1,7 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 // MÓDULOS
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ServiceModule } from "./services/service.module";
 import { PagesModule } from "./pages/pages.module";
 // RUTAS
@@ -13,7 +13,14 @@ import { RegisterComponent } from "./login/register.component";
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent],
-  imports: [BrowserModule, FormsModule, APP_ROUTES, ServiceModule, PagesModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    APP_ROUTES,
+    ServiceModule,
+    PagesModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

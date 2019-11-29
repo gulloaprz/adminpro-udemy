@@ -11,7 +11,9 @@
       <form
         class="form-horizontal form-material"
         id="loginform"
-        (ngSubmit)="ingresar()"
+        #f="ngForm"
+        ngNativeValidate
+        (ngSubmit)="ingresar(f)"
       >
         <a href="javascript:void(0)" class="text-center db">
           <img src="../assets/images/logo-icon.png" alt="Home" /><br /><img
@@ -24,7 +26,9 @@
             <input
               class="form-control"
               type="text"
-              required=""
+              name="email"
+              [ngModel]="email"
+              required="required"
               placeholder="Usuario"
             />
           </div>
@@ -34,7 +38,9 @@
             <input
               class="form-control"
               type="password"
-              required=""
+              name="password"
+              ngModel
+              required="required"
               placeholder="Contraseña"
             />
           </div>
@@ -45,6 +51,8 @@
               <input
                 id="checkbox-signup"
                 type="checkbox"
+                name="recuerdame"
+                [(ngModel)]="recuerdame"
                 class="filled-in chk-col-light-blue"
               />
               <label for="checkbox-signup"> Recuérdame </label>
@@ -92,7 +100,7 @@
         <div class="form-group m-b-0">
           <div class="col-sm-12 text-center">
             No tienes una cuenta
-            <a href="pages-register2.html" class="text-primary m-l-5"
+            <a routerLink="/register" class="text-primary m-l-5"
               ><b>Regístrate</b></a
             >
           </div>
