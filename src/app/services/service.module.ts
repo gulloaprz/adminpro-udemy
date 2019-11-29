@@ -6,7 +6,8 @@ import {
   SettingsService,
   SidebarService,
   SharedService,
-  UsuarioService
+  UsuarioService,
+  SubirArchivoService
 } from "./service.index";
 
 @NgModule({
@@ -17,7 +18,8 @@ import {
     SettingsService,
     SidebarService,
     SharedService,
-    UsuarioService
+    UsuarioService,
+    SubirArchivoService
   ]
 })
 export class ServiceModule {}

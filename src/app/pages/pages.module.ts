@@ -19,8 +19,10 @@ import { AccountSettingsComponent } from "./account-settings/account-settings.co
  */
 import { IncrementadorComponent } from "src/app/components/incrementador/incrementador.component";
 import { GraficoDonaComponent } from "src/app/components/grafico-dona/grafico-dona.component";
-import { PromesasComponent } from './promesas/promesas.component';
-import { RxjsComponent } from './rxjs/rxjs.component';
+import { PromesasComponent } from "./promesas/promesas.component";
+import { RxjsComponent } from "./rxjs/rxjs.component";
+import { PipesModule } from "src/app/pipes/pipes.module";
+import { ProfileComponent } from "./profile/profile.component";
 
 @NgModule({
   declarations: [
@@ -32,13 +34,15 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     IncrementadorComponent,
     GraficoDonaComponent,
     PromesasComponent,
-    RxjsComponent
+    RxjsComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     ChartsModule,
     SharedModule,
+    PipesModule,
     PAGES_ROUTES
   ],
   exports: [

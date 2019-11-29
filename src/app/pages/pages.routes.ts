@@ -7,6 +7,7 @@ import { Graficas1Component } from "./graficas1/graficas1.component";
 import { PromesasComponent } from "./promesas/promesas.component";
 import { RxjsComponent } from "./rxjs/rxjs.component";
 import { LoginGuard } from "../services/service.index";
+import { ProfileComponent } from "./profile/profile.component";
 
 const pagesRoutes: Routes = [
   {
@@ -23,6 +24,11 @@ const pagesRoutes: Routes = [
         path: "account-setting",
         component: AccountSettingsComponent,
         data: { titulo: "Ajustes del tema" }
+      },
+      {
+        path: "perfil",
+        component: ProfileComponent,
+        data: { titulo: "Perfil de usuario" }
       },
       {
         path: "progress",
